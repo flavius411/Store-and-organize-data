@@ -1,0 +1,46 @@
+print("Clasa cu familia ta, motoul ei, pasiunile membriilor, nume si prenume")
+input("Press ENTER to continue")
+
+class MyFamily:
+    _family_num = 0
+    _family_motto = None
+    def __init__(self, name=None, prenom=None, age=None, passions=None, motto=None):
+        self._name = name
+        self._age = age
+        self._prenom = prenom
+        self._passions = passions
+        self._motto = motto
+        type(self)._family_num += 1
+        type(self)._family_motto = motto
+
+    def display(self):
+        print("Name: " + str({self._name}) + " prenom: " + str({self._prenom}) + ' age: ' + str(
+            {self._age}) + " years old, and is passionate of " + str({self._passions}))
+
+    @classmethod
+    def displayFamilyNum(cls):
+        print("Family structure " + str({cls._family_num}) + ' people')
+
+    @classmethod
+    def displayMotto(cls):
+        print("Family's motto: " + str({cls._family_motto}))
+
+
+me = MyFamily('Coltton', 'Justin', 21, "skydiving", "Nimic fara Dumnezeu")
+me.display()
+brother = MyFamily("Coltton", "Casi", 19, "tradeing", "Nimic fara Dumnezeu")
+brother.display()
+mother = MyFamily("Coltton", "Lidia", 45, "cooking", "Nimic fara Dumnezeu")
+mother.display()
+father = MyFamily("Coltton", 'George', 45, "football", "Nimic fara Dumnezeu")
+father.display()
+sister = MyFamily("Coltton", "Lavi", 20, 'planes', "Nimic fara Dumnezeu")
+sister.display()
+lil_brother = MyFamily("Coltton", "Narcis", 13, 'video-games', "Nimic fara Dumnezeu")
+lil_brother.display()
+old_brother = MyFamily('Coltton', 'Dennis', 25, 'hockey', "Nimic fara Dumnezeu")
+old_brother.display()
+MyFamily.displayFamilyNum()
+MyFamily.displayMotto()
+
+input("Press ENTER to exit")

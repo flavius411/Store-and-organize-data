@@ -1,0 +1,93 @@
+print("Printeaza doar cifrele pare din lista urmatoare:")
+print("1, 4, 9, 16, 25, 36, 49, 64, 81, 100")
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+a1 = [e for e in a if not e%2]
+print(a1)
+input("Press ENTER to continue")
+
+print("\nSorteaza lista urmatoare de nume apoi prezinta care este cel mai fregvent si mai putin intalnit:")
+lista = ["Ioana", "Paul", "Andreea", "Alexandra", "Dani", "Nicu", "Andreea", "Lucas", "Andrei", "Andreea"]
+print(lista)
+input("Press ENTER to continue")
+lista.sort()
+
+print("Din aceasta lista, sortata:\n",lista)
+res = max(set(lista), key = lista.count)
+print("Cel mai fregvent nume:\n",res)
+res2 = min(set(lista), key = lista.count)
+print("Unul din cele mai putin intalnite este:\n", res2)
+input("Press ENTER to continue")
+# Exercitiul 2:
+print(' ')
+lista1=[["Ioana", "Paul"], ["Andreea", "Alexandra"]]
+lista2=[["Dani", "Nicu"], ["Andreea", "Lucas"], ["Andrei", "Andreea"]]
+lista3=lista1 + lista2
+print('Aceasta este lista de prieteni grupata: ' + str(lista3))
+#print(len(sum(lista1)))
+print('Caracterele din prima grupa: ' + str(sum(len(i) for i in lista1[0])))
+print('Caracterele din a doua grupa: '  + str(sum(len(i) for i in lista1[1])))
+print('Caracterele din a treia grupa: ' + str(sum(len(i) for i in lista2[0])))
+print('Caracterele din a patra grupa: '+ str(sum(len(i) for i in lista2[1])))
+print('Caracterele din a cincia grupa: '+ str(sum(len(i) for i in lista2[2])))
+lista1[0]= str(sum(len(i) for i in lista1[0]))
+lista1[1]= str(sum(len(i) for i in lista1[1]))
+lista2[0]= str(sum(len(i) for i in lista2[0]))
+lista2[1]= str(sum(len(i) for i in lista2[1]))
+lista2[2]= str(sum(len(i) for i in lista2[2]))
+lista1.sort(reverse=False)
+lista2.sort(reverse=True)
+lista3= lista1 + lista2
+lista3.sort(reverse=False)
+print('Caracterele grupelor in ordine descrescatoare: ' + str(lista3))
+
+list1=[["Ioana", "Paul"], ["Andreea", "Alexandra"]]
+list2=[["Dani", "Nicu"], ["Andreea", "Lucas"], ["Andrei", "Andreea"]]
+
+list3= list1 + list2
+list3.sort(reverse=False)
+print('Acesta fiind lista cu numele prietenilor in ordine descrescatoare de unde provine lista de mai sus: ' + str(list3))
+print(str(list3) + "\n")
+input("Press ENTER to continue")
+# Exercitiul 3:
+print('Exercitiul 3: \nNumerele pare si divizibile cu 7 de la 0 pana la 3463 care se opresc la multiplul 666: ')
+
+num=[]
+for x in range(0, 666):
+    if (x%7==0) and (x%2==0):
+        num.append(str(x))
+print (','.join(num))
+
+
+# Exercitiul 4:
+
+def script():
+    def reverse(s):
+        str = ""
+        for i in s:
+            str = i + str
+        return str
+
+    s = input("Introdu un cuvant/propozitie: ")
+
+    print("Inversul cuvantului " + s + " este: " + reverse(s) + "! \n")
+
+    print("Sa aflam cate caractere are urmatorul cuvant/propozitie")
+    txt = input("Scrie un cuvant/propozitie: ")
+
+    def count_chars(txt):
+        result = 0
+        for i in txt:
+            result += 1
+        return result
+
+    print(count_chars(txt))
+    restart =input("Restart?(da/nu)")
+    if restart == "da" or restart == "d":
+        script()
+    if restart == "n" or restart == "nu":
+        print("Goodbye.")
+script()
+
+
+
+

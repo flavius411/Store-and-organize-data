@@ -1,0 +1,21 @@
+#Exercitiul 1
+print('Numerele de telefon a prietenilor:')
+telefoane={'Flavius':'0758401030', 'Athos': '0748322499', 'Radis':'0729344699', 'Sabina':'0732544323', 'Alexandra':'0753994371', 'Rebeca':'0769743292',
+           'Savi':'0758400080', 'Paul':'0733259920', 'Rafi':'0772392057', 'Lavi': '0734299301'}
+print(telefoane, "\n")
+input("Press ENTER to continue")
+#Exercitiul 1.2
+print('Numerele de telefon ale prietenilor sortate in mod alfabetic: ')
+print(sorted(telefoane.items(), key=
+lambda kv: (kv[0], kv[1])))
+print("\n")
+input("Press ENTER to continue")
+#Exercitiul 2
+produse_magazin={'Pantofi':45.50, 'Geaca':35, 'Pulover':41.30, 'Sacou':55, 'Tricou':24}
+print('Lista de produse a unui magazin: ', produse_magazin)
+myList = sorted(produse_magazin.items(), key=lambda x: x[1], reverse=True)
+print("Lista initiala sortata: " + str(myList))
+print('Primele 3 produse din lista sortate descrescator: ')
+print(str(myList[0]) + '\n' + str(myList[1]) + '\n' + str(myList[2]))
+
+input("Press ENTER to exit")
